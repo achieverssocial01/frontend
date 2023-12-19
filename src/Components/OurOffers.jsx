@@ -1,5 +1,4 @@
 import React from 'react'
-import { PiStudentBold } from "react-icons/pi";
 
 const OurOffers = () =>{
     return(
