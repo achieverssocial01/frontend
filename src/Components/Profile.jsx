@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaPen } from "react-icons/fa6";
 import { RiLockPasswordFill } from "react-icons/ri";
 import ChangePassword from "./ChangePassword";
+import { FaCircleExclamation } from "react-icons/fa6";
+
 const Profile = () => {
   const [changePasswordComponent, setChangePasswordComponent] = useState(false);
 
@@ -41,12 +43,17 @@ const Profile = () => {
                 >
                   Name
                 </label>
+
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
+               
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="username"
                   type="text"
                   placeholder="Payal Dhabarde"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
               <div className="mb-4">
                 <label
@@ -55,12 +62,16 @@ const Profile = () => {
                 >
                   Phone Number
                 </label>
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
+               
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="number"
                   type="number"
                   placeholder="9811234564"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
             </div>
 
@@ -72,12 +83,17 @@ const Profile = () => {
                 >
                   Email Address
                 </label>
+
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
+               
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="email"
                   type="email"
                   placeholder="payal@gmail.com"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
               <div className="mb-4">
                 <label
@@ -86,12 +102,16 @@ const Profile = () => {
                 >
                   Gender
                 </label>
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
+               
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="gender"
                   type="text"
                   placeholder="Add Gender"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
             </div>
 
@@ -103,12 +123,16 @@ const Profile = () => {
                 >
                   Birthday
                 </label>
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
+               
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="birthday"
                   type="text"
                   placeholder="Add Birthday"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
               <div className="mb-4">
                 <label
@@ -117,12 +141,16 @@ const Profile = () => {
                 >
                   State
                 </label>
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
+               
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="state"
                   type="text"
                   placeholder="Maharashtra"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
             </div>
 
@@ -134,12 +162,16 @@ const Profile = () => {
                 >
                   City
                 </label>
+
+                <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none w-full text-white font-poppins text-xs leading-5 focus:outline-none "
                   id="city"
                   type="text"
                   placeholder="Add City"
                 />
+                 <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div>
               </div>
               <div className="mb-4">
                 <label
@@ -148,29 +180,37 @@ const Profile = () => {
                 >
                   Pincode
                 </label>
+             <div className=" flex shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
                 <input
-                  className="shadow bg-[#1A1C24] appearance-none border rounded-full w-72 py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                  className="shadow bg-[#1A1C24] appearance-none  w-full text-white font-poppins text-xs leading-5 focus:outline-none  "
                   id="pincode"
                   type="pincode"
                   placeholder="Add Pincode"
                 />
-              </div>
+                <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+              </div></div>
             </div>
 
             <div className="mb-4">
+              <div>
               <label
                 className="block text-gray-100 text-sm font-bold mb-2"
                 htmlFor="address"
               >
                 Address
               </label>
+              <div className="flex bg-[#1A1C24] appearance-none border rounded-full w-[596px] py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]">
               <input
-                className="shadow bg-[#1A1C24] appearance-none border rounded-full w-[596px] py-2 px-3 text-white font-poppins text-xs leading-5 focus:outline-none focus:shadow-outline border-[#8B8989]"
+                className="shadow bg-[#1A1C24] appearance-none rerd  w-full ml-4  text-white font-poppins text-xs leading-5 focus:outline-none focus:border-none border-transperant"
                 id="address"
                 type="text"
-                placeholder="Add Address"
-              />
+                placeholder="Add Address"/>
+                <FaCircleExclamation className="rounded-full text-[#F23E3E] h-5 w-5  mr-2"/>
+                </div>
+                </div>
             </div>
+
+            
 
             <div className="flex gap-4">
               {/* <Link to="/changePassword"> */}

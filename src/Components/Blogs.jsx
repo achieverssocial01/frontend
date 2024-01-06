@@ -9,7 +9,7 @@ const Blogs = ()=>{
 
         <>
    <div className='relative z-0'>
-        <div className=' absolute z-4 -top-20  bg-[#000000]'>
+        <div className=' absolute z-4   bg-[#000000]'>
        <div className='text-center '>
  <h1 className='font-montserrat leading-9 text-white font-bold text-3xl mt-12'>Blogs</h1>
  <p className='font-lato text-base leading-5 mt-7  text-[#8B8989]'>Articles that keep you informed about courses, money and <br/>achieve your goals.</p> </div>

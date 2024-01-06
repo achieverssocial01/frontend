@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoSearch } from "react-icons/io5";
 import SignIn from './SignIn';
+import { Link } from 'react-router-dom';
 
 const MyCoursesExplore = () => {
   return (
@@ -29,7 +30,7 @@ const MyCoursesExplore = () => {
         height="180px"
 /></div>
             <div className='text-white rounded ml-4'>
-            <a href='/showCourse' target='_blank'> <h1 className='font-montserrat mt-2 mb-2 text-xl leading-6 font-semibold'>Bronze Package</h1></a>
+            <Link to='/showCourses' >  <h1 className='font-montserrat mt-2 mb-2 text-xl leading-6 font-semibold'>Bronze Package</h1></Link>
                 <div className="w-[280px] mb-2 bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
              <div className="bg-blue-600 h-1.5 rounded-full" style={{width: "45%"}}></div></div>
              <p className='font-lato text-sm leading-4 font-medium'>45% Completed</p>
@@ -50,7 +51,7 @@ const MyCoursesExplore = () => {
         height="180px"
 /></div>
             <div className='text-white ml-4'>
-                <a href='/showCourse' target='_blank'><h1 className='font-montserrat mt-2 mb-2 text-xl leading-6 font-semibold'>Bronze Package</h1></a>
+            <Link to='/showCourses' > <h1 className='font-montserrat mt-2 mb-2 text-xl leading-6 font-semibold'>Bronze Package</h1></Link>
                 <div className="w-[280px] mb-2 bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
              <div className="bg-blue-600 h-1.5 rounded-full" style={{width: "45%"}}></div></div>
              <p className='font-lato text-sm leading-4 font-medium'>45% Completed</p>
@@ -73,7 +74,7 @@ const MyCoursesExplore = () => {
         height="180px"
 /></div>
             <div className='text-white ml-4'>
-            <a href='/showCourse' target='_blank'>  <h1 className='font-montserrat mt-2 mb-2 text-xl leading-6 font-semibold'>Bronze Package</h1></a>
+            <Link to='/showCourses' >  <h1 className='font-montserrat mt-2 mb-2 text-xl leading-6 font-semibold'>Bronze Package</h1></Link>
                 <div className="w-[280px] mb-2 bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
              <div className="bg-blue-600 h-1.5 rounded-full" style={{width: "45%"}}></div></div>
              <p className='font-lato text-sm leading-4 font-medium'>45% Completed</p>

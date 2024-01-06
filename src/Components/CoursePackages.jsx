@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 
@@ -11,14 +11,14 @@ const TestAnything = () => {
     const onOptionClicked =(value) => () =>{
       
         setSelectedOption(value);
-        if(value === "Bronze Package"){
-          navigate('/showCourse');
+        if(value === "Bronze Package"|| "Silver Package" || "Gold Package"){
+          navigate('/viewPackage');
         }
         setIsOpen(false);
     }
   return (
     <>
-    <div className='inline-flex '>
+    <div  className='inline-flex '>
     <div className=' relative inline-flex rounded bg-[#100D0F]' >
        
             <button
@@ -33,8 +33,9 @@ const TestAnything = () => {
         </div>
 
 {isOpen && (
-        <div className='min-w-[200px] absolute top-6 right-0 z-10 mt-1 min-w-[200px origin-top-right rounded-md border border-gray-100 bg-white shadow-lg'>
+        <div  className='min-w-[200px] absolute top-6 right-0 z-10 mt-1 min-w-[200px origin-top-right rounded-md border border-gray-100 bg-white shadow-lg'>
             {options.map((option) =>(
+              
             <button type='button' 
             onClick={onOptionClicked(option)} 
             key={Math.random()}

@@ -1,30 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { BsPersonFill } from "react-icons/bs";
-import { FaFileInvoice } from "react-icons/fa6";
-import { TbCertificate } from "react-icons/tb";
-import { IoMdLogOut } from "react-icons/io";
+import React, { useContext, useEffect, useState } from "react";
 import Profile from "./Profile";
 import Affiliate from "./Affiliate";
 import Invoice from "./Invoice";
 import MyPayments from "./MyPayments";
 import Certificates from "./Certificates";
-
 import Logout from "./Logout";
 import ChangePassword from "./ChangePassword";
 import CourseCompletionCertificate from "./CourseCompletionCertificate";
 import ForgotPassword from "./ForgotPassword";
+import DashboardContext from "../Context/DashboardContext";
+
 const Dashboard = () => {
   const [openDialog, setOpenDialog] = useState(false);
-  const [selectedPage, setSelectedPage] = useState(0);
-
+const {selectedPage, setSelectedPage} = useContext(DashboardContext)
+  // const [selectedPage, setSelectedPage] = useState(0);
 
   return (
-    <>
       <div className="flex justify-start gap-6">
         <div className="bg-[#1A1C24] mr-0 mt-5 rounded relative z-0 w-56 h-[530px] text-center">
           <div className="pt-5 ml-16 ">
             <img
-              class="w-12 h-12 rounded-full"
+              className="w-12 h-12 rounded-full"
               src="https://www.secpay.io/img/Pic5.png"
               alt="Rounded avatar"
             />
@@ -85,7 +81,7 @@ const Dashboard = () => {
               onClick={() => setOpenDialog(true)}
               className="flex cursor-pointer gap-2 pl-12"
             >
-          <img src="/img/4.svg" className="h-6 w-5" />
+          <img src="/img/4.svg" className="h- w-5" />
           <span className="mt-1">Logout</span>
             </div>
           </div>
@@ -106,7 +102,7 @@ const Dashboard = () => {
         {selectedPage === 5 && <CourseCompletionCertificate/>}
         {openDialog && <Logout setOpenDialog={setOpenDialog} />}
       </div>
-    </>
+  
   );
 };
 

@@ -1,21 +1,45 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import { MdOutlineShare } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 
 import { RxDotFilled } from "react-icons/rx";
 import Footer from './Footer';
 import ReferCourse from './ReferCourse';
+import OutsideClick from './OutsideClick';
+import ProfileData from './ProfileData';
 const ShowPackages = () => {
   
   const [passSuccess, setPassSuccess] = useState(false);
+  const[open , setOpen] = useState(false)
+
+  const menuRef=useRef();
+
+  useEffect (() =>{
+      const handler =(e)=>{
+          if(!menuRef.current.contains(e.target)){
+            setOpen(false)
+          }
+      };
+      document.addEventListener('mousedown',handler);
+      return()=>{
+          document.removeEventListener('mousedown',handler);
+      };
+  },[]);
+
   return (
     <>
 
-    <div className='bg-[#100D0F] w-full mb-24'>
+    <div  className='bg-[#100D0F] w-full mb-24'>
 
-      <div className='flex justify-between '>
+      <div ref={menuRef} className='flex justify-between '>
 
-        <div className='flex'>
-            <img src='/img/pinklogo.png' className='w-56 h-20 mt-3 ml-8'/>
+        <div className='flex gap-4'>
+        <img
+            onClick={() => navigate("/")}
+            src="/img/pinklogo.png" 
+            alt="logo"
+            className="w-[124px] h-[25px] mt-10 ml-9"
+          />
             <h1 className='text-white mt-10'> |  Bronze Package</h1>
         </div>
 
@@ -25,15 +49,15 @@ const ShowPackages = () => {
             </div>
 
 <div className='w-11 h-11 border-t-[#4B006E]  border-l-[#4B006E] border-b-white rounded-[50%] border-2 border-gradient-to-b from-[#4B006E] to-[#FF6584] relative'>
-<p className='text-white absolute text-xs mt-3'>30/50</p>
+<p  className='text-white absolute text-xs mt-3'>30/50</p>
 </div>
-    <div onClick={() => setPassSuccess(true)} className='bg-[#4B006E] cursor-pointer flex w-48 mt-1 rounded-full h-9'>
+    <div  onClick={() => setPassSuccess(true)} className='bg-[#4B006E] cursor-pointer flex w-48 mt-1 rounded-full h-9'>
                 <MdOutlineShare className='mt-2 ml-2 text-white'/>
                 <h1 className='text-white text-sm mt-2 ml-1 '>Refer This Courses</h1>
             </div>
 
-            <div className='mt-1 mr-9'>
-    <img class="w-10 h-10 rounded-full" src="https://www.secpay.io/img/Pic5.png" alt="Rounded avatar"/>
+            <div  className='mt-1 mr-9'>
+    <img  className="w-10 h-10 rounded-full" src="https://www.secpay.io/img/Pic5.png" alt="Rounded avatar"/>
 
     </div>
         </div>
@@ -72,7 +96,7 @@ const ShowPackages = () => {
 </div></div>
 
 
-<div className='bg-[#1A1C24] w-[280px] mt-9 ml-7 h-[550px] object-center	rounded'>
+<div className='bg-[#1A1C24] w-[480px] mt-9 ml-7 h-[550px] object-center	rounded'>
 <h1 className='text-white font-montserrat font-bold text-base mt-3 ml-2'>Course Content</h1>
   <div className='ml-3 mt-4 space-y-3'>
     
@@ -134,14 +158,16 @@ const ShowPackages = () => {
   </div>
 <hr className='w-64 mb-2 mt-2'/>
 
+
 </div>
 
 </div>
 
 </div>
       </div>
-      
+      <OutsideClick onClickOutside={setOpen}>
 {passSuccess && <ReferCourse setPassSuccess={setPassSuccess} />}
+</OutsideClick>
 
     </>
   )
