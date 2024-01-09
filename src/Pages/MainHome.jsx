@@ -10,13 +10,13 @@ const MainHome = () =>{
 
     return(
 
-        <>
+        <div>
         <HomeTop/>
         {/* <GptCodeTest/> */}
         <OurPackages/>
-        {/* <Testimonials/> */}
-        {/* <Subscribe/> */}
-        </>
+        <Testimonials/>
+        <Subscribe/>
+        </div>
     )
 }
 

@@ -24,17 +24,17 @@ const Subscribe = () => {
   }
 }
   return (
-    <>
-      <div className='flex md:items-center justify-between mt-48 text-white'>
+    
+      <div className='flex items-center flex-col  md:flex-row justify-between px-[37px] md:px-[50px] py-[150px]  text-white'>
 
-        <div className='ml-9'>
-            <h1 className='font-montserrat md:text-3xl font-semibold leading-10 '>Subscribe<br/> to get Updates.</h1>
-            <p className='font-sans text-sm font-medium text-[#8B8989] leading-5 mt-1'>Don't miss out on the latest trends and opportunities – be the<br/> first to know and take your learning journey to the next level</p>
+        <div className='flex-1'>
+            <h1 className='font-montserrat text-[1.5rem] leading-[29.26px]	 md:text-3xl font-semibold md:leading-10 text-center md:text-left  '>Subscribe <br className='hidden md:block' /> to get Updates.</h1>
+            <p className='font-sans md:w-[64%] text-sm font-medium text-[#8B8989] text-center md:text-left leading-5 mt-1'>Don't miss out on the latest trends and opportunities – be the first to know and take your learning journey to the next level</p>
         </div>
 
         <div >
 
-            <div className='mt-12 mr-9'>
+            <div className='mt-12 flex flex-1 items-center '>
                 <input type='email' name='email' placeholder='Enter Email ID' 
                  onChange={(e)=>setSearch(e.target.value)}
                 className='md:w-80 h-9 rounded-full text-[#8B8989] bg-white pl-5 text-sm font-sans font-semibold'/>
@@ -44,7 +44,7 @@ const Subscribe = () => {
             </div>
         </div>
       </div>
-    </>
+    
   )
 }
 

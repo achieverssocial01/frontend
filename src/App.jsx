@@ -38,7 +38,7 @@ const App = () => {
     }
   }, [location.pathname]);
   return (
-    <div className="bg-[#000000] select-none" >
+    <div className="bg-[#000000] select-none " >
       <DashboardContextProvider>
      {showNavbar && <NavBar2 />}
       <Routes>
